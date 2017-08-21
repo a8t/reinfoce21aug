@@ -1,6 +1,7 @@
 require "./ex1.rb"
 require "pp"
 require "yaml"
+require "json"
 
 class TodoList
 
@@ -30,4 +31,4 @@ b.add_task(a)
 b.add_task(c)
 b.add_task(d)
 
-puts b.show_tasks.to_yaml
+ b.show_tasks.each {|each| puts each.to_yaml[21..-1]}
